@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RecipeForge • Privacy Policy</title>
+<meta name="theme-color" content="#FF6A00" />
+<style>
+:root{
+  --rf-bg:#FFF7F0; --rf-text:#1C2128; --rf-muted:#5A6776;
+  --rf-accent-1:#FF6A00; --rf-accent-2:#FFC14D;
+  --rf-card:#FFFFFF; --rf-border:rgba(0,0,0,.08); --rf-shadow:0 8px 30px rgba(0,0,0,.07)
+}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:var(--rf-bg); color:var(--rf-text); line-height:1.65
+}
+.container{width:min(1000px,92%);margin:0 auto}
+header{
+  padding:60px 0 30px;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255,193,77,.25), transparent 60%),
+    radial-gradient(900px 500px at 100% -20%, rgba(255,106,0,.18), transparent 60%),
+    linear-gradient(180deg, #fff8f0 0%, var(--rf-bg) 100%);
+}
+h1{font-size:clamp(28px,4.6vw,44px);margin:0}
+.subtitle{color:var(--rf-muted);margin-top:8px}
+section{padding:22px 0}
+.card{
+  background:var(--rf-card); border:1px solid var(--rf-border);
+  border-radius:16px; padding:22px; box-shadow:var(--rf-shadow); margin-bottom:18px
+}
+h2{margin:.2rem 0 .6rem;font-size:clamp(18px,2.6vw,24px)}
+h3{margin:1rem 0 .3rem;font-size:18px}
+a{color:#0b62ff;text-decoration:none;border-bottom:1px solid rgba(11,98,255,.25)}
+a:hover{border-color:#0b62ff}
+footer{padding:40px 0 60px;color:var(--rf-muted);font-size:14px}
+.small{font-size:13px;color:var(--rf-muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Effective date: <span id="eff">October 6, 2025</span></p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <p>This Privacy Policy explains how <strong>Best Value LLC</strong> (“we,” “us,” “our”) collects, uses, and protects information when you use the <strong>RecipeForge</strong> iOS app and this website.</p>
+    <p class="small">This page is provided for convenience and does not constitute legal advice.</p>
+  </section>
+
+  <section class="card">
+    <h2>Information We Collect</h2>
+    <h3>Account & Authentication</h3>
+    <p>When you sign in with Apple or Google, we receive basic account identifiers (e.g., user ID) from the provider to create and maintain your RecipeForge account.</p>
+
+    <h3>App Usage</h3>
+    <p>We store data needed to operate features, such as daily usage counters (e.g., number of recipes generated), preferences (cuisine, spice level), and purchase status.</p>
+
+    <h3>Purchases</h3>
+    <p>Subscription status and transactions are processed by Apple. We may receive anonymized or minimal purchase metadata from <em>RevenueCat</em> to unlock Full Access.</p>
+
+    <h3>Diagnostics</h3>
+    <p>We may collect crash reports and performance metrics to improve stability.</p>
+  </section>
+
+  <section class="card">
+    <h2>How We Use Information</h2>
+    <ul>
+      <li>Authenticate users and sync usage across devices</li>
+      <li>Provide daily free recipe limits and Full Access features</li>
+      <li>Process and verify subscriptions</li>
+      <li>Improve app performance, quality, and support</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Third-Party Services</h2>
+    <p>RecipeForge may rely on the following providers (subject to their policies):</p>
+    <ul>
+      <li><strong>Apple</strong> (App Store, Sign in with Apple, in-app purchases)</li>
+      <li><strong>Google</strong> (Google Sign-In; optional analytics/ads if enabled)</li>
+      <li><strong>RevenueCat</strong> (subscription management)</li>
+      <li><strong>Firebase/Firestore</strong> (data storage, crash reporting)</li>
+      <li><strong>Ad networks</strong> (ads shown on the free tier, if enabled)</li>
+    </ul>
+    <p>These providers may process data according to their own privacy policies.</p>
+  </section>
+
+  <section class="card">
+    <h2>Data Retention</h2>
+    <p>We retain information for as long as necessary to provide the service and meet legal obligations. You may request deletion of your account data via support.</p>
+
+    <h2>Security</h2>
+    <p>We use industry-standard measures to protect information. No method of transmission or storage is 100% secure.</p>
+
+    <h2>Your Choices</h2>
+    <ul>
+      <li>Sign in with Apple or Google to manage account data</li>
+      <li>Disable ad tracking on your device where available</li>
+      <li>Contact support to request account deletion</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Children</h2>
+    <p>RecipeForge is not directed to children under 13 (or the minimum age required in your region). We do not knowingly collect personal information from children.</p>
+
+    <h2>International Transfers</h2>
+    <p>Information may be processed and stored in countries other than yours. We take steps to protect data in accordance with this Policy.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Policy. Continued use after changes means you accept the updated terms.</p>
+  </section>
+
+  <section class="card">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:support@bestvaluellc.com">support@bestvaluellc.com</a></p>
+    <p>Address: Best Value LLC</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Best Value LLC · RecipeForge
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
