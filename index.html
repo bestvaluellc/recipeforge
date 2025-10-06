@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RecipeForge Support</title>
+
+  <!-- Meta / SEO -->
+  <meta name="description" content="RecipeForge Support — help, FAQ, and contact." />
+  <meta property="og:title" content="RecipeForge Support" />
+  <meta property="og:description" content="Get help with RecipeForge: FAQ, contact, and policies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FF6A00" />
+
+  <style>
+    :root{
+      --rf-bg:#FFF7F0;           /* light background */
+      --rf-text:#1C2128;         /* dark text */
+      --rf-muted:#5A6776;        /* secondary text */
+      --rf-accent-1:#FF6A00;     /* icon orange (start) */
+      --rf-accent-2:#FFC14D;     /* icon orange (end) */
+      --rf-card:#FFFFFF;         /* card bg */
+      --rf-border:rgba(0,0,0,.08);
+      --rf-shadow:0 8px 30px rgba(0,0,0,.07);
+    }
+
+    /* Base */
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--rf-bg);
+      color: var(--rf-text);
+      line-height: 1.6;
+    }
+    .container{width:min(1100px,92%);margin:0 auto}
+
+    /* Header / Hero */
+    .hero{
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(255,193,77,.25), transparent 60%),
+        radial-gradient(900px 500px at 100% -20%, rgba(255,106,0,.18), transparent 60%),
+        linear-gradient(180deg, #fff8f0 0%, var(--rf-bg) 100%);
+      padding: 64px 0 40px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:14px;
+      background: linear-gradient(135deg,var(--rf-accent-1),var(--rf-accent-2));
+      box-shadow: var(--rf-shadow);
+      display:grid;place-items:center;color:white;font-weight:800;
+      letter-spacing:.5px;
+    }
+    .title{font-size: clamp(26px, 4vw, 40px); margin: 4px 0 6px}
+    .subtitle{color:var(--rf-muted); font-size: clamp(14px, 2.4vw, 18px); margin:0}
+
+    /* Buttons */
+    .btn{
+      display:inline-block; padding:12px 18px; border-radius:12px;
+      text-decoration:none; font-weight:600;
+      border:1px solid var(--rf-border);
+      color:var(--rf-text); background:var(--rf-card);
+      transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: var(--rf-shadow); }
+    .btn.primary{
+      color:white; border-color:transparent;
+      background: linear-gradient(135deg,var(--rf-accent-1),var(--rf-accent-2));
+    }
+
+    /* Sections */
+    section{padding: 28px 0}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card{
+      background:var(--rf-card); border:1px solid var(--rf-border);
+      border-radius:16px; padding:18px 18px; box-shadow: var(--rf-shadow);
+    }
+    h2{ margin:0 0 10px; font-size: clamp(18px,2.5vw,22px)}
+    h3{ margin:0 0 8px; font-size: 18px}
+    p{ margin: 0 0 10px}
+    ul{ margin: 0 0 8px 18px}
+    .badge{
+      display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px;
+      background:linear-gradient(135deg,rgba(255,106,0,.12),rgba(255,193,77,.12));
+      color:#8a4b00; border:1px solid rgba(255,106,0,.2);
+      margin-left:8px;
+    }
+
+    /* Footer */
+    footer{ padding: 40px 0 60px; color:var(--rf-muted); font-size:14px }
+    .links a{ color: var(--rf-text); text-decoration:none; border-bottom:1px solid var(--rf-border); }
+    .links a:hover{ border-color: var(--rf-text); }
+
+    /* Small helper rows */
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .spacer{height:12px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">RF</div>
+        <div>
+          <div class="title">RecipeForge Support</div>
+          <p class="subtitle">Help, FAQ, and contact for the RecipeForge iOS app.</p>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="row">
+        <a class="btn primary" href="#contact">Contact Support</a>
+        <a class="btn" href="#faq">FAQ</a>
+        <a class="btn" href="#policies">Policies</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- QUICK LINKS -->
+    <section aria-labelledby="quicklinks">
+      <div class="grid">
+        <div class="card">
+          <h2 id="quicklinks">Quick Help</h2>
+          <p><strong>Daily Free Recipes:</strong> 10 text recipes/day. Free preview counts are shown in-app.</p>
+          <p><strong>Full Access:</strong> Unlimited recipes, no ads.</p>
+          <p><strong>Sign-In:</strong> Sign in with Apple or Google to sync usage and purchases.</p>
+        </div>
+        <div class="card">
+          <h2>Version & Status</h2>
+          <p>Current app: <span class="mono">RecipeForge iOS</span></p>
+          <p>If something looks off, try: force-quit the app, relaunch, and check your network.</p>
+          <p>Purchases handled by <span class="mono">App Store</span>.</p>
+        </div>
+        <div class="card" id="contact">
+          <h2>Contact Support</h2>
+          <p>We usually reply within 1–2 business days.</p>
+          <p>Email: <a href="mailto:support@bestvaluellc.com">support@bestvaluellc.com</a></p>
+          <p>When writing, include your device model, iOS version, and steps to reproduce.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="card">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <h3>How many free recipes do I get daily?</h3>
+        <p>You get 10 free AI-crafted recipes each day. Usage resets at local midnight.</p>
+
+        <h3>Do I need an account?</h3>
+        <p>Yes, sign in with Apple or Google to sync usage and access purchases across devices.</p>
+
+        <h3>What does Full Access include?</h3>
+        <p>Unlimited recipes and an ad-free experience.</p>
+
+        <h3>My purchase didn’t unlock Full Access.</h3>
+        <p>Open the app → Settings → Restore Purchases. If it doesn’t unlock, contact support with your Apple receipt.</p>
+
+        <h3>Does RecipeForge work offline?</h3>
+        <p>Recipe generation requires an internet connection.</p>
+      </div>
+    </section>
+
+    <!-- POLICIES -->
+    <section id="policies" aria-labelledby="policies-title">
+      <div class="grid">
+        <div class="card">
+          <h2 id="policies-title">Policies</h2>
+          <p>Read our policies below:</p>
+          <ul>
+            <li><a href="https://bestvaluellc.github.io/recipeforge/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><a href="https://bestvaluellc.github.io/recipeforge/terms" target="_blank" rel="noopener">Terms of Use</a></li>
+            <li><a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage Subscription</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Release Notes<span class="badge">New</span></h2>
+          <p>Check the App Store listing for the latest changes and improvements.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="links">
+        © <span id="year"></span> Best Value LLC · RecipeForge ·
+        <a href="mailto:support@bestvaluellc.com">support@bestvaluellc.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // tiny helper to set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
