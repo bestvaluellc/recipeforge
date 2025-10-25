@@ -73,6 +73,40 @@
 
     .qr { display: flex; align-items: center; gap: 14px; background: var(--accent); border: 1px dashed #39414b; border-radius: 14px; padding: 12px 14px; }
     .qr canvas { width: 84px; height: 84px; background: #fff; border-radius: 8px; }
+    
+.qr-card {
+  display: flex;
+  align-items: center;
+  background-color: #1d1f23;
+  padding: 16px 22px;
+  border-radius: 14px;
+  width: 360px;
+  gap: 18px;
+}
+
+.qr {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.qr-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.qr-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.qr-sub {
+  font-size: 14px;
+  opacity: 0.7;
+  color: white;
+}
 
     footer { opacity: .8; font-size: 13px; color: var(--muted); padding: 28px 0 8px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     footer a { color: var(--fg); text-decoration: none; opacity: .9; }
@@ -97,13 +131,14 @@
           <a id="tfMain" class="btn" href="https://testflight.apple.com/join/fYHZPrRu" target="_blank" rel="noopener">Get TestFlight Build</a>
           <button class="btn secondary" id="copyLink">Copy Invite Link</button>
         </div>
-        <div class="qr" style="margin-top:12px">
-          <canvas id="qrCanvas" aria-label="QR code to TestFlight"></canvas>
-          <div>
-            <div style="font-weight:700">Scan on your phone</div>
-            <div style="color:var(--muted); font-size:14px">Opens the public TestFlight invite.</div>
-          </div>
-        </div>
+        <div class="qr-card">
+           <img src="assets/recipeforge-qr.png" alt="QR Code" class="qr">
+           <div class="qr-text">
+             <div class="qr-title">Scan on your phone</div>
+             <div class="qr-sub">Opens the public TestFlight invite.</div>
+             </div>
+         </div>
+
         <div class="features">
           <div class="feature"><h3>Daily Free Tier</h3><p>Create up to 10 recipes each day. No sign‑in required for browsing.</p></div>
           <div class="feature"><h3>Pro = No Limits</h3><p>Unlimited recipes and photos. No ads. Power features coming soon.</p></div>
