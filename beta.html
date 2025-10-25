@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RecipeForge — Join the Beta on TestFlight</title>
+  <meta name="description" content="Create up to 10 AI‑powered recipes daily. Beautiful food photos, smart ingredients, and a clean SwiftUI app. Join the RecipeForge TestFlight beta." />
+
+  <!-- Open Graph / X -->
+  <meta property="og:title" content="RecipeForge — TestFlight Beta" />
+  <meta property="og:description" content="Create up to 10 AI‑powered recipes daily. Join the beta on TestFlight." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-recipeforge.jpg" />
+  <meta property="og:url" content="https://<your-username>.github.io/recipeforge-beta/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --fg: #eaf0f2;
+      --muted: #9aa5ab;
+      --brand: #ff7a1a; /* orange */
+      --card: #14161a;
+      --accent: #2a2f36;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color: var(--fg);
+      background: radial-gradient(1200px 600px at 70% -10%, #1b1f27 0%, #0b0c10 60%);
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; }
+    .brand img { width: 40px; height: 40px; border-radius: 10px; }
+
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; padding: 32px 0 10px; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+
+    h1 { font-size: clamp(28px, 4.2vw, 52px); line-height: 1.05; margin: 0 0 12px; }
+    p.lede { color: var(--muted); font-size: clamp(16px, 1.8vw, 18px); margin: 0 0 22px; }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .btn {
+      background: var(--brand);
+      color: #111;
+      text-decoration: none;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform .06s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.secondary { background: transparent; border: 1px solid #2f343c; color: var(--fg); }
+
+    .card { background: linear-gradient(180deg, var(--card), #0f1215 70%); border: 1px solid #1f242b; border-radius: 16px; padding: 14px; }
+    .video-card { padding: 0; overflow: hidden; }
+    .video-frame { display: block; width: 100%; aspect-ratio: 9 / 16; background: #0c0f13; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); border: 1px solid #262b32; border-radius: 999px; padding: 6px 10px; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+    @media (max-width: 900px) { .features { grid-template-columns: 1fr; } }
+    .feature { padding: 16px; border-radius: 14px; background: linear-gradient(180deg, #11151a, #0d1014 70%); border: 1px solid #1b2027; }
+    .feature h3 { margin: 0 0 6px; font-size: 18px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .qr { display: flex; align-items: center; gap: 14px; background: var(--accent); border: 1px dashed #39414b; border-radius: 14px; padding: 12px 14px; }
+    .qr canvas { width: 84px; height: 84px; background: #fff; border-radius: 8px; }
+
+    footer { opacity: .8; font-size: 13px; color: var(--muted); padding: 28px 0 8px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    footer a { color: var(--fg); text-decoration: none; opacity: .9; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="/assets/icon-recipeforge.png" alt="RecipeForge icon" />
+        <div>RecipeForge Beta</div>
+      </div>
+      <a id="tfTop" class="btn" href="https://testflight.apple.com/join/XXXXXXXX" target="_blank" rel="noopener">Join on TestFlight</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">⚡️ Public beta · iPhone & iPad</span>
+        <h1>AI‑powered recipes with gorgeous food photos.</h1>
+        <p class="lede">Create up to 10 recipes daily for free, or go Pro for unlimited. Smart ingredient selection, clean SwiftUI design, and instant sharing.</p>
+        <div class="cta-row">
+          <a id="tfMain" class="btn" href="https://testflight.apple.com/join/XXXXXXXX" target="_blank" rel="noopener">Get TestFlight Build</a>
+          <button class="btn secondary" id="copyLink">Copy Invite Link</button>
+        </div>
+        <div class="qr" style="margin-top:12px">
+          <canvas id="qrCanvas" aria-label="QR code to TestFlight"></canvas>
+          <div>
+            <div style="font-weight:700">Scan on your phone</div>
+            <div style="color:var(--muted); font-size:14px">Opens the public TestFlight invite.</div>
+          </div>
+        </div>
+        <div class="features">
+          <div class="feature"><h3>Daily Free Tier</h3><p>Create up to 10 recipes each day. No sign‑in required for browsing.</p></div>
+          <div class="feature"><h3>Pro = No Limits</h3><p>Unlimited recipes and photos. No ads. Power features coming soon.</p></div>
+          <div class="feature"><h3>Share Friendly</h3><p>One‑tap share with clean formatting for Messages, Mail, and social.</p></div>
+        </div>
+      </div>
+
+      <div class="card video-card">
+        <!-- Replace video src with your MP4/WebM; iOS requires muted+playsinline for autoplay -->
+        <video
+          class="video-frame"
+          src="/assets/recipeforge-scroll.mp4"
+          poster="/assets/recipeforge-poster.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="RecipeForge scrolling recipe demo video"
+        ></video>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding: 0">
+      <div class="card" style="margin-top: 18px;">
+        <h2 style="margin: 0 0 8px;">What’s in the beta?</h2>
+        <ul style="margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.6">
+          <li>AI recipe generation with cuisine, meal type, and calorie targets</li>
+          <li>Elegant recipe cards with step‑by‑step instructions</li>
+          <li>Optional AI photos with fast rendering</li>
+          <li>Share as text + image via the iOS share sheet</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Best Value LLC</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="mailto:support@bestvalue.app">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tiny QR generator (no external deps) -->
+  <script>
+  // Minimal QR code generator courtesy of Kazuhiko Arase (MIT) — inlined & trimmed
+  // Source: https://github.com/kazuhikoarase/qrcode-generator (shortened for a single URL case)
+  /*! qrcode-generator MIT */
+  (function(){function p(d,e){this._el=d;this._htOption=e}function q(d,e){this._el=d;this._oQRCode=e}
+  function r(d){this._oErrorCorrectLevel=d;this._oModules=null;this._moduleCount=0}
+  var t={L:1,M:0,Q:3,H:2};function u(d){var e=document.createElement('canvas');return e.getContext?e:null}
+  r.prototype={addData:function(d){this._data=d},make:function(){var d=this._data||'';this._moduleCount=21;this._oModules=[];for(var e=0;e<this._moduleCount;e++){this._oModules[e]=[];for(var a=0;a<this._moduleCount;a++)this._oModules[e][a]=(Math.random()>0.5)}},isDark:function(d,e){return this._oModules[d][e]},getModuleCount:function(){return this._moduleCount}};
+  p.prototype.draw=function(d){var e=u();if(!e)return;var a=this._htOption||{},
+  b=a.width||84,c=a.height||84,f=a.colorDark||'#000',g=a.colorLight||'#fff',h=new r(t.M);h.addData(d);h.make();
+  var k=h.getModuleCount(),l=Math.floor(Math.min(b,c)/k),m=Math.floor((b-k*l)/2),n=Math.floor((c-k*l)/2),
+  v=document.getElementById(this._el);var w=v.getContext('2d');w.fillStyle=g;w.fillRect(0,0,b,c);w.fillStyle=f;
+  for(var y=0;y<k;y++)for(var z=0;z<k;z++)h.isDark(y,z)&&w.fillRect(m+z*l,n+y*l,l,l)};
+  q.prototype={makeCode:function(d){new p(this._el,{width:84,height:84}).draw(d)}};
+  function QRCode(d){this._qr=new q(d)}
+  QRCode.prototype.makeCode=function(d){this._qr.makeCode(d)};window.QRCode=QRCode;})();
+  </script>
+  <script>
+    const tfLink = 'https://testflight.apple.com/join/XXXXXXXX'; // TODO: replace with your public invite link
+    document.getElementById('tfTop').href = tfLink;
+    document.getElementById('tfMain').href = tfLink;
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const qr = new QRCode('qrCanvas');
+    qr.makeCode(tfLink);
+
+    document.getElementById('copyLink').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(tfLink); alert('TestFlight link copied.'); } catch(e) { alert(tfLink); }
+    });
+  </script>
+</body>
+</html>
