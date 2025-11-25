@@ -1,212 +1,304 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RecipeForge Support</title>
+    <meta charset="UTF-8" />
+    <title>RecipeForge – AI-Powered Recipes From Your Ingredients</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="RecipeForge turns your ingredients into complete AI-crafted recipes with beautiful food photos and a personal cookbook." />
 
-  <!-- Meta / SEO -->
-  <meta name="description" content="RecipeForge Support — help, FAQ, and contact." />
-  <meta property="og:title" content="RecipeForge Support" />
-  <meta property="og:description" content="Get help with RecipeForge: FAQ, contact, and policies." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#FF6A00" />
-  <meta name="google-site-verification" content="t0LhLbAud_ngDO09bH6tJZ9lsoGlEUvqYsyTsiW-A2g" />
+    <style>
+        :root {
+            --accent: #ff7a3c;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+        }
 
-  <style>
-    :root{
-      --rf-bg:#FFF7F0;           /* light background */
-      --rf-text:#1C2128;         /* dark text */
-      --rf-muted:#5A6776;        /* secondary text */
-      --rf-accent-1:#FF6A00;     /* icon orange (start) */
-      --rf-accent-2:#FFC14D;     /* icon orange (end) */
-      --rf-card:#FFFFFF;         /* card bg */
-      --rf-border:rgba(0,0,0,.08);
-      --rf-shadow:0 8px 30px rgba(0,0,0,.07);
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    /* Base */
-    html,body{margin:0;padding:0}
-    body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--rf-bg);
-      color: var(--rf-text);
-      line-height: 1.6;
-    }
-    .container{width:min(1100px,92%);margin:0 auto}
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            color: var(--text-main);
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.60)),
+                url("images/kitchen-hero.png") center top / cover no-repeat fixed;
+        }
 
-    /* Header / Hero */
-    .hero{
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(255,193,77,.25), transparent 60%),
-        radial-gradient(900px 500px at 100% -20%, rgba(255,106,0,.18), transparent 60%),
-        linear-gradient(180deg, #fff8f0 0%, var(--rf-bg) 100%);
-      padding: 64px 0 40px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:14px;
-    }
-    .logo{
-      width:56px;height:56px;border-radius:14px;
-      background: linear-gradient(135deg,var(--rf-accent-1),var(--rf-accent-2));
-      box-shadow: var(--rf-shadow);
-      display:grid;place-items:center;color:white;font-weight:800;
-      letter-spacing:.5px;
-    }
-    .title{font-size: clamp(26px, 4vw, 40px); margin: 4px 0 6px}
-    .subtitle{color:var(--rf-muted); font-size: clamp(14px, 2.4vw, 18px); margin:0}
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    /* Buttons */
-    .btn{
-      display:inline-block; padding:12px 18px; border-radius:12px;
-      text-decoration:none; font-weight:600;
-      border:1px solid var(--rf-border);
-      color:var(--rf-text); background:var(--rf-card);
-      transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: var(--rf-shadow); }
-    .btn.primary{
-      color:white; border-color:transparent;
-      background: linear-gradient(135deg,var(--rf-accent-1),var(--rf-accent-2));
-    }
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 28px 18px 56px;
+            color: #f9fafb;
+        }
 
-    /* Sections */
-    section{padding: 28px 0}
-    .grid{
-      display:grid; gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-    .card{
-      background:var(--rf-card); border:1px solid var(--rf-border);
-      border-radius:16px; padding:18px 18px; box-shadow: var(--rf-shadow);
-    }
-    h2{ margin:0 0 10px; font-size: clamp(18px,2.5vw,22px)}
-    h3{ margin:0 0 8px; font-size: 18px}
-    p{ margin: 0 0 10px}
-    ul{ margin: 0 0 8px 18px}
-    .badge{
-      display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px;
-      background:linear-gradient(135deg,rgba(255,106,0,.12),rgba(255,193,77,.12));
-      color:#8a4b00; border:1px solid rgba(255,106,0,.2);
-      margin-left:8px;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
 
-    /* Footer */
-    footer{ padding: 40px 0 60px; color:var(--rf-muted); font-size:14px }
-    .links a{ color: var(--rf-text); text-decoration:none; border-bottom:1px solid var(--rf-border); }
-    .links a:hover{ border-color: var(--rf-text); }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    /* Small helper rows */
-    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .spacer{height:12px}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
-  </style>
+        /* NEW: use your orange bowl logo */
+        .logo-icon {
+            width: 38px;
+            height: 38x;
+            border-radius: 12px;
+            overflow: hidden;
+           
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            opacity: 0.85;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: rgba(17,24,39,0.8);
+            border: 1px solid rgba(249,250,251,0.15);
+            font-size: 0.75rem;
+            color: #e5e7eb;
+            margin-bottom: 10px;
+        }
+
+        .hero-tagline-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 10px rgba(255,122,60,0.9);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.0rem, 3vw, 2.6rem);
+            margin: 4px 0 10px;
+        }
+
+        .hero p {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 0.98rem;
+            color: #e5e7eb;
+        }
+
+        /* Phones section now just acts as a layout wrapper */
+        .phones-section {
+            margin-top: 40px;
+            background: transparent;       /* no panel */
+            border: none;
+            padding: 0;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: none;
+        }
+
+        .phones-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 26px;
+            filter: drop-shadow(0 20px 28px rgba(0,0,0,0.35)); /* soft floaty shadow */
+        }
+
+        .phone-card {
+            max-width: 220px;
+            text-align: center;
+        }
+
+        .phone-frame {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .phone-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #f9fafb;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .phone-text {
+            font-size: 0.83rem;
+            color: #e5e7eb;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .hero-actions {
+            margin-top: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .appstore-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 14px;
+            background: #0b0b0f;
+            color: #f9fafb;
+            font-size: 0.86rem;
+            border: 1px solid rgba(156,163,175,0.7);
+        }
+
+        .hero-note {
+            font-size: 0.78rem;
+            color: #9ca3af;
+        }
+
+        footer {
+            margin-top: 26px;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 640px) {
+            .phone-card {
+                max-width: 240px;
+            }
+            .phone-frame {
+                max-width: 240px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+<div class="page">
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <div class="brand">
-        <div class="logo">RF</div>
-        <div>
-          <div class="title">RecipeForge Support</div>
-          <p class="subtitle">Help, FAQ, and contact for the RecipeForge iOS app.</p>
+    <header>
+        <div class="logo-wrap">
+            <div class="logo-icon">
+                <img src="images/rforge.png" alt="RecipeForge logo">
+            </div>
+            <div class="logo-text">RecipeForge</div>
         </div>
-      </div>
+        <nav>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
 
-      <div class="spacer"></div>
-
-      <div class="row">
-        <a class="btn primary" href="#contact">Contact Support</a>
-        <a class="btn" href="#faq">FAQ</a>
-        <a class="btn" href="#policies">Policies</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- QUICK LINKS -->
-    <section aria-labelledby="quicklinks">
-      <div class="grid">
-        <div class="card">
-          <h2 id="quicklinks">Quick Help</h2>
-          <p><strong>Daily Free Recipes:</strong> 5 text recipes/day. Free preview counts are shown in-app.</p>
-          <p><strong>Full Access:</strong> Unlimited recipes, no ads.</p>
-          <p><strong>Sign-In:</strong> Sign in with Apple or Google to sync usage and purchases.</p>
+    <section class="hero">
+        <div class="hero-tagline">
+            <span class="hero-tagline-dot"></span>
+            <span>AI-powered recipes from your ingredients</span>
         </div>
-        <div class="card">
-          <h2>Version & Status</h2>
-          <p>Current app: <span class="mono">RecipeForge iOS</span></p>
-          <p>If something looks off, try: force-quit the app, relaunch, and check your network.</p>
-          <p>Purchases handled by <span class="mono">App Store</span>.</p>
+
+        <h1>AI-Powered Recipes From the Ingredients You Already Have.</h1>
+
+        <p>
+            RecipeForge instantly turns what’s in your kitchen into complete recipes – with
+            clear steps, timing, cuisine tags, and a beautiful food photo for every dish.
+        </p>
+
+        <div class="phones-section">
+
+            <div class="phones-row">
+
+                <article class="phone-card">
+                    <img src="images/screen1frame.png" class="phone-frame" alt="Choose your recipe plan screen">
+                    <div class="phone-title">Discover a Recipe</div>
+                    <div class="phone-text">
+                        Let AI surprise you with creative dishes using what you already have.
+                    </div>
+                </article>
+
+                <article class="phone-card">
+                    <img src="images/screen2frame.png" class="phone-frame" alt="Review your ingredients screen">
+                    <div class="phone-title">Review Ingredients</div>
+                    <div class="phone-text">
+                        Organize proteins, carbs, veggies, and spices before you cook.
+                    </div>
+                </article>
+
+                <article class="phone-card">
+                    <img src="images/screen3frame.png" class="phone-frame" alt="Generated recipe screen">
+                    <div class="phone-title">Generate Recipe</div>
+                    <div class="phone-text">
+                        Get a full recipe with steps, timing, and a rich food photo.
+                    </div>
+                </article>
+
+                <article class="phone-card">
+                    <img src="images/screen4frame.png" class="phone-frame" alt="My recipes list screen">
+                    <div class="phone-title">Build Your AI Cookbook</div>
+                    <div class="phone-text">
+                        Save favorites and build your own AI-powered recipe library.
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="hero-actions">
+                <!-- Replace # with your real App Store URL -->
+                <a class="appstore-btn" href="https://apps.apple.com/us/app/recipeforge/id6749389394">
+                    <span></span>
+                    <span>Download on the App Store</span>
+                </a>
+                <div class="hero-note">No account required • Create recipes in seconds</div>
+            </div>
+
         </div>
-        <div class="card" id="contact">
-          <h2>Contact Support</h2>
-          <p>We usually reply within 1–2 business days.</p>
-          <p>Email: <a href="mailto:recipeforgeapp@gmail.com">recipeforgeapp@gmail.com</a></p>
-          <p>When writing, include your device model, iOS version, and steps to reproduce.</p>
-        </div>
-      </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" aria-labelledby="faq-title">
-      <div class="card">
-        <h2 id="faq-title">Frequently Asked Questions</h2>
+    <footer>
+        © <span id="year"></span> Best Value LLC. All rights reserved.
+    </footer>
 
-        <h3>How many free recipes do I get daily?</h3>
-        <p>You get 10 free AI-crafted recipes each day. Usage resets at local midnight.</p>
+</div>
 
-        <h3>Do I need an account?</h3>
-        <p>Yes, sign in with Apple or Google to sync usage and access purchases across devices.</p>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-        <h3>What does Full Access include?</h3>
-        <p>Unlimited recipes and an ad-free experience.</p>
-
-        <h3>My purchase didn’t unlock Full Access.</h3>
-        <p>Open the app → Settings → Restore Purchases. If it doesn’t unlock, contact support with your Apple receipt.</p>
-
-        <h3>Does RecipeForge work offline?</h3>
-        <p>Recipe generation requires an internet connection.</p>
-      </div>
-    </section>
-
-    <!-- POLICIES -->
-    <section id="policies" aria-labelledby="policies-title">
-      <div class="grid">
-        <div class="card">
-          <h2 id="policies-title">Policies</h2>
-          <p>Read our policies below:</p>
-          <ul>
-            <li><a href="https://bestvaluellc.github.io/recipeforge/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><a href="https://bestvaluellc.github.io/recipeforge/terms" target="_blank" rel="noopener">Terms of Use</a></li>
-            <li><a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage Subscription</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h2>Release Notes<span class="badge">New</span></h2>
-          <p>Check the App Store listing for the latest changes and improvements.</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="links">
-        © <span id="year"></span> Best Value LLC · RecipeForge ·
-        <a href="mailto:recipeforgeapp@gmail.com">support@bestvaluellc.com</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // tiny helper to set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
